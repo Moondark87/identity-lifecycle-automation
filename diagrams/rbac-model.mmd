@@ -1,0 +1,39 @@
+%%{init: {"flowchart": {"wrappingWidth": 320, "htmlLabels": true}}}%%
+flowchart LR
+    U["<b>User account</b><br/>priya.raman<br/>EmployeeID 100103"]
+
+    subgraph ROLE ["Role groups · managed by automation"]
+        R1["ROLE-All-Employees"]
+        R2["ROLE-Finance"]
+        R3["ROLE-Finance-AP"]
+        R4["ROLE-Site-A"]
+    end
+
+    subgraph RES ["Resource groups · owned by IT / app owners"]
+        X1["RES-FS-Finance-RW<br/>Finance file share"]
+        X2["APP-ERP-AP-User<br/>ERP payables module"]
+        X3["LIC-M365-E3<br/>Group-based licensing"]
+        X4["GPO-Site-A-Printers<br/>GPO security filtering"]
+    end
+
+    CAP["<b>Conditional Access</b><br/>Policies assigned to role groups"]
+
+    U --> R1 & R2 & R3 & R4
+    R1 --> X3
+    R2 --> X1
+    R3 --> X2
+    R4 --> X4
+    R1 -. targeted by .-> CAP
+
+    A["<b>Separate admin account</b><br/>adm-marcus.lee"]
+    P["<b>PRIV-Tier1-Admins</b><br/>PIM eligible, time-bound<br/>MFA + justification to activate"]
+    A -. PIM activation .-> P
+
+    classDef box fill:#f6f8fa,stroke:#57606a,color:#1f2328
+    classDef priv fill:#fdecea,stroke:#c0392b,stroke-width:2px,color:#1f2328
+    classDef control fill:#fff4e5,stroke:#d79b00,stroke-width:2px,color:#1f2328
+    class U,R1,R2,R3,R4,X1,X2,X3,X4,A box
+    class P priv
+    class CAP control
+    style ROLE fill:none,stroke:#4a7fc1,stroke-width:2px,color:#4a7fc1
+    style RES fill:none,stroke:#5a9a4a,stroke-width:2px,color:#5a9a4a

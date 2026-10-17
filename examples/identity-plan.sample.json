@@ -1,0 +1,420 @@
+﻿[
+    {
+        "Action":  "Review",
+        "EmployeeID":  "",
+        "SamAccountName":  "",
+        "DisplayName":  "Chris Dale",
+        "Reason":  "HRIS record has no EmployeeID. Fix in HRIS; it cannot be matched.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Review",
+        "EmployeeID":  "100090",
+        "SamAccountName":  "owen.grant",
+        "DisplayName":  "Owen Grant",
+        "Reason":  "Disabled 2026-08-03; 30-day retention has ended. Eligible for deletion (manual).",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100101",
+        "SamAccountName":  "dana.whitfield",
+        "DisplayName":  "Dana Whitfield",
+        "Reason":  "In sync with HRIS.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100102",
+        "SamAccountName":  "marcus.lee",
+        "DisplayName":  "Marcus Lee",
+        "Reason":  "In sync with HRIS.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Mover",
+        "EmployeeID":  "100103",
+        "SamAccountName":  "priya.raman",
+        "DisplayName":  "Priya Raman",
+        "Reason":  "Department change: Sales -> Finance.",
+        "AttributeChanges":  {
+                                 "Department":  {
+                                                    "From":  "Sales",
+                                                    "To":  "Finance"
+                                                },
+                                 "Title":  {
+                                               "From":  "Sales Coordinator",
+                                               "To":  "Accounts Payable Specialist"
+                                           },
+                                 "ManagerEmployeeID":  {
+                                                           "From":  "100111",
+                                                           "To":  "100110"
+                                                       }
+                             },
+        "GroupsToAdd":  [
+                            "ROLE-Finance",
+                            "ROLE-Finance-AP"
+                        ],
+        "GroupsToRemove":  [
+                               "ROLE-Sales"
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Joiner",
+        "EmployeeID":  "100104",
+        "SamAccountName":  "tom.herrera",
+        "DisplayName":  "Tom Herrera",
+        "Reason":  "Pre-hire; created disabled, enabled on 2026-10-19.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+                            "ROLE-All-Employees",
+                            "ROLE-Sales",
+                            "ROLE-Sales-Rep",
+                            "ROLE-Site-B"
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+                        "GivenName":  "Tom",
+                        "Surname":  "Herrera",
+                        "UserPrincipalName":  "tom.herrera@example.com",
+                        "Path":  "OU=Employees,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+                        "Department":  "Sales",
+                        "Title":  "Account Executive",
+                        "Office":  "SITE-B",
+                        "ManagerEmployeeID":  "100111",
+                        "Enable":  false,
+                        "StartDate":  "2026-10-19"
+                    }
+    },
+    {
+        "Action":  "Joiner",
+        "EmployeeID":  "100105",
+        "SamAccountName":  "aisha.bello",
+        "DisplayName":  "Aisha Bello",
+        "Reason":  "New hire; start date reached.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+                            "ROLE-All-Employees",
+                            "ROLE-HR",
+                            "ROLE-HR-Generalist",
+                            "ROLE-Site-HQ"
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+                        "GivenName":  "Aisha",
+                        "Surname":  "Bello",
+                        "UserPrincipalName":  "aisha.bello@example.com",
+                        "Path":  "OU=Employees,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+                        "Department":  "HR",
+                        "Title":  "HR Generalist",
+                        "Office":  "HQ",
+                        "ManagerEmployeeID":  "100112",
+                        "Enable":  true,
+                        "StartDate":  "2026-10-13"
+                    }
+    },
+    {
+        "Action":  "Leaver",
+        "EmployeeID":  "100106",
+        "SamAccountName":  "kevin.oconnor",
+        "DisplayName":  "Kevin O'Connor",
+        "Reason":  "Terminated effective 2026-10-15.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+                               "ROLE-All-Employees",
+                               "ROLE-Finance",
+                               "ROLE-Finance-AP",
+                               "ROLE-Site-A",
+                               "VPN-Users"
+                           ],
+        "Details":  {
+                        "UserPrincipalName":  "kevin.oconnor@example.com",
+                        "DisabledOU":  "OU=Disabled,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+                        "DeleteAfter":  "2026-11-15"
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100107",
+        "SamAccountName":  "sofia.marino",
+        "DisplayName":  "Sofia Marino",
+        "Reason":  "Termination scheduled for 2026-10-31.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Review",
+        "EmployeeID":  "100108",
+        "SamAccountName":  "james.park",
+        "DisplayName":  "James Park",
+        "Reason":  "HRIS shows active but the account is disabled (rehire or HRIS error). Confirm before re-enabling.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Review",
+        "EmployeeID":  "100109",
+        "SamAccountName":  "",
+        "DisplayName":  "Elena Novak",
+        "Reason":  "Possible existing account without EmployeeID: elena.novak. Link EmployeeID manually instead of creating a duplicate.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Update",
+        "EmployeeID":  "100110",
+        "SamAccountName":  "robert.chen",
+        "DisplayName":  "Robert Chen",
+        "Reason":  "Attribute change: Title.",
+        "AttributeChanges":  {
+                                 "Title":  {
+                                               "From":  "Finance Supervisor",
+                                               "To":  "Finance Manager"
+                                           }
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100111",
+        "SamAccountName":  "grace.okafor",
+        "DisplayName":  "Grace Okafor",
+        "Reason":  "In sync with HRIS.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100112",
+        "SamAccountName":  "hannah.brooks",
+        "DisplayName":  "Hannah Brooks",
+        "Reason":  "In sync with HRIS.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "NoChange",
+        "EmployeeID":  "100113",
+        "SamAccountName":  "",
+        "DisplayName":  "Liam Walsh",
+        "Reason":  "Future hire (starts 2026-11-30); account is created 7 days before start.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Joiner",
+        "EmployeeID":  "100114",
+        "SamAccountName":  "marcus.lee2",
+        "DisplayName":  "Marcus Lee",
+        "Reason":  "New hire; start date reached.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+                            "ROLE-All-Employees",
+                            "ROLE-Sales",
+                            "ROLE-Sales-Rep",
+                            "ROLE-Site-HQ"
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+                        "GivenName":  "Marcus",
+                        "Surname":  "Lee",
+                        "UserPrincipalName":  "marcus.lee2@example.com",
+                        "Path":  "OU=Employees,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+                        "Department":  "Sales",
+                        "Title":  "Account Executive",
+                        "Office":  "HQ",
+                        "ManagerEmployeeID":  "100111",
+                        "Enable":  true,
+                        "StartDate":  "2026-10-14"
+                    }
+    },
+    {
+        "Action":  "Activate",
+        "EmployeeID":  "100115",
+        "SamAccountName":  "nina.patel",
+        "DisplayName":  "Nina Patel",
+        "Reason":  "Start date reached; enable pre-hire account.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+                        "UserPrincipalName":  "nina.patel@example.com"
+                    }
+    },
+    {
+        "Action":  "Review",
+        "EmployeeID":  "100099",
+        "SamAccountName":  "jordan.miles",
+        "DisplayName":  "Jordan Miles",
+        "Reason":  "Orphaned account: EmployeeID not found in HRIS. Confirm owner, then offboard or correct.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    },
+    {
+        "Action":  "Review",
+        "EmployeeID":  "",
+        "SamAccountName":  "kiosk.lobby",
+        "DisplayName":  "Kiosk Lobby",
+        "Reason":  "Enabled account has no EmployeeID. Link to an HRIS record, convert to a service account, or disable.",
+        "AttributeChanges":  {
+
+                             },
+        "GroupsToAdd":  [
+
+                        ],
+        "GroupsToRemove":  [
+
+                           ],
+        "Details":  {
+
+                    }
+    }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "SamAccountName": "dana.whitfield", "UserPrincipalName": "dana.whitfield@example.com", "EmployeeID": "100101",
+    "GivenName": "Dana", "Surname": "Whitfield", "Department": "IT", "Title": "IT Manager", "Office": "HQ",
+    "ManagerEmployeeID": "", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-IT", "ROLE-IT-Manager", "ROLE-Site-HQ", "VPN-Users"]
+  },
+  {
+    "SamAccountName": "marcus.lee", "UserPrincipalName": "marcus.lee@example.com", "EmployeeID": "100102",
+    "GivenName": "Marcus", "Surname": "Lee", "Department": "IT", "Title": "Systems Administrator", "Office": "HQ",
+    "ManagerEmployeeID": "100101", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-IT", "ROLE-IT-Systems", "ROLE-Site-HQ", "VPN-Users"]
+  },
+  {
+    "SamAccountName": "adm-marcus.lee", "UserPrincipalName": "adm-marcus.lee@example.com", "EmployeeID": "100102",
+    "GivenName": "Marcus", "Surname": "Lee", "Department": "IT", "Title": "Administrative account", "Office": "HQ",
+    "ManagerEmployeeID": "", "Description": "Tier 1 admin account. Privileged roles via PIM only.", "Enabled": true,
+    "Groups": ["PRIV-Tier1-Eligible"]
+  },
+  {
+    "SamAccountName": "priya.raman", "UserPrincipalName": "priya.raman@example.com", "EmployeeID": "100103",
+    "GivenName": "Priya", "Surname": "Raman", "Department": "Sales", "Title": "Sales Coordinator", "Office": "SITE-A",
+    "ManagerEmployeeID": "100111", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Sales", "ROLE-Site-A"]
+  },
+  {
+    "SamAccountName": "kevin.oconnor", "UserPrincipalName": "kevin.oconnor@example.com", "EmployeeID": "100106",
+    "GivenName": "Kevin", "Surname": "O'Connor", "Department": "Finance", "Title": "Accounts Payable Specialist", "Office": "SITE-A",
+    "ManagerEmployeeID": "100110", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Finance", "ROLE-Finance-AP", "ROLE-Site-A", "VPN-Users"]
+  },
+  {
+    "SamAccountName": "sofia.marino", "UserPrincipalName": "sofia.marino@example.com", "EmployeeID": "100107",
+    "GivenName": "Sofia", "Surname": "Marino", "Department": "Sales", "Title": "Account Executive", "Office": "SITE-B",
+    "ManagerEmployeeID": "100111", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Contractors", "ROLE-Sales", "ROLE-Sales-Rep", "ROLE-Site-B"]
+  },
+  {
+    "SamAccountName": "james.park", "UserPrincipalName": "james.park@example.com", "EmployeeID": "100108",
+    "GivenName": "James", "Surname": "Park", "Department": "IT", "Title": "Service Desk Analyst", "Office": "HQ",
+    "ManagerEmployeeID": "100101", "Description": "Disabled 2026-03-02 by identity lifecycle automation (EmployeeID 100108). Delete after 2026-04-01.", "Enabled": false,
+    "Groups": []
+  },
+  {
+    "SamAccountName": "elena.novak", "UserPrincipalName": "elena.novak@example.com", "EmployeeID": "",
+    "GivenName": "Elena", "Surname": "Novak", "Department": "Finance", "Title": "AP Specialist", "Office": "SITE-A",
+    "ManagerEmployeeID": "", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Finance"]
+  },
+  {
+    "SamAccountName": "robert.chen", "UserPrincipalName": "robert.chen@example.com", "EmployeeID": "100110",
+    "GivenName": "Robert", "Surname": "Chen", "Department": "Finance", "Title": "Finance Supervisor", "Office": "SITE-A",
+    "ManagerEmployeeID": "", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Finance", "ROLE-Finance-Manager", "ROLE-Site-A"]
+  },
+  {
+    "SamAccountName": "grace.okafor", "UserPrincipalName": "grace.okafor@example.com", "EmployeeID": "100111",
+    "GivenName": "Grace", "Surname": "Okafor", "Department": "Sales", "Title": "Sales Manager", "Office": "SITE-B",
+    "ManagerEmployeeID": "", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Sales", "ROLE-Sales-Manager", "ROLE-Site-B"]
+  },
+  {
+    "SamAccountName": "hannah.brooks", "UserPrincipalName": "hannah.brooks@example.com", "EmployeeID": "100112",
+    "GivenName": "Hannah", "Surname": "Brooks", "Department": "HR", "Title": "HR Manager", "Office": "HQ",
+    "ManagerEmployeeID": "", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-HR", "ROLE-HR-Manager", "ROLE-Site-HQ"]
+  },
+  {
+    "SamAccountName": "nina.patel", "UserPrincipalName": "nina.patel@example.com", "EmployeeID": "100115",
+    "GivenName": "Nina", "Surname": "Patel", "Department": "IT", "Title": "Service Desk Analyst", "Office": "HQ",
+    "ManagerEmployeeID": "100101", "Description": "Pre-hire: enable on 2026-10-16", "Enabled": false,
+    "Groups": ["ROLE-All-Employees", "ROLE-IT", "ROLE-IT-ServiceDesk", "ROLE-Site-HQ"]
+  },
+  {
+    "SamAccountName": "owen.grant", "UserPrincipalName": "owen.grant@example.com", "EmployeeID": "100090",
+    "GivenName": "Owen", "Surname": "Grant", "Department": "Sales", "Title": "Account Executive", "Office": "SITE-B",
+    "ManagerEmployeeID": "100111", "Description": "Disabled 2026-08-03 by identity lifecycle automation (EmployeeID 100090). Delete after 2026-09-02.", "Enabled": false,
+    "Groups": []
+  },
+  {
+    "SamAccountName": "jordan.miles", "UserPrincipalName": "jordan.miles@example.com", "EmployeeID": "100099",
+    "GivenName": "Jordan", "Surname": "Miles", "Department": "Sales", "Title": "Account Executive", "Office": "SITE-B",
+    "ManagerEmployeeID": "100111", "Description": "", "Enabled": true,
+    "Groups": ["ROLE-All-Employees", "ROLE-Sales", "ROLE-Sales-Rep", "ROLE-Site-B"]
+  },
+  {
+    "SamAccountName": "kiosk.lobby", "UserPrincipalName": "kiosk.lobby@example.com", "EmployeeID": "",
+    "GivenName": "Kiosk", "Surname": "Lobby", "Department": "", "Title": "", "Office": "HQ",
+    "ManagerEmployeeID": "", "Description": "Lobby check-in kiosk", "Enabled": true,
+    "Groups": []
+  },
+  {
+    "SamAccountName": "svc-backup", "UserPrincipalName": "svc-backup@example.com", "EmployeeID": "",
+    "GivenName": "", "Surname": "", "Department": "", "Title": "", "Office": "",
+    "ManagerEmployeeID": "", "Description": "Backup service account", "Enabled": true,
+    "Groups": ["RES-Backup-Operators"]
+  }
+]

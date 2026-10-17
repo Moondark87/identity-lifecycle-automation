@@ -1,0 +1,28 @@
+{
+  "Baseline": {
+    "Employee": ["ROLE-All-Employees"],
+    "Contractor": ["ROLE-All-Contractors"]
+  },
+  "Departments": {
+    "Finance": ["ROLE-Finance"],
+    "HR": ["ROLE-HR"],
+    "IT": ["ROLE-IT"],
+    "Sales": ["ROLE-Sales"]
+  },
+  "JobCodes": {
+    "FIN-AP": ["ROLE-Finance-AP"],
+    "FIN-MGR": ["ROLE-Finance-Manager"],
+    "HR-GEN": ["ROLE-HR-Generalist"],
+    "HR-MGR": ["ROLE-HR-Manager"],
+    "IT-HD": ["ROLE-IT-ServiceDesk"],
+    "IT-MGR": ["ROLE-IT-Manager"],
+    "IT-SYS": ["ROLE-IT-Systems"],
+    "SAL-MGR": ["ROLE-Sales-Manager"],
+    "SAL-REP": ["ROLE-Sales-Rep"]
+  },
+  "Locations": {
+    "HQ": ["ROLE-Site-HQ"],
+    "SITE-A": ["ROLE-Site-A"],
+    "SITE-B": ["ROLE-Site-B"]
+  }
+}

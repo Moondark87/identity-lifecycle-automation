@@ -1,0 +1,35 @@
+%%{init: {"flowchart": {"wrappingWidth": 420, "htmlLabels": true}}}%%
+flowchart TB
+    HR["<b>HRIS</b><br/>System of record for people<br/>EmployeeID · Department · Job code · Status"]
+    LC["<b>Identity Lifecycle Automation</b><br/>EmployeeID matching · Joiner / Mover / Leaver<br/>Role groups · Email feed back to HRIS"]
+    IdP["<b>Identity Providers</b><br/>Active Directory · Entra ID · IdP proxy"]
+    CA["<b>Conditional Access Layer</b><br/>MFA · Device state · Sign-in risk"]
+
+    subgraph AV ["Access Vectors"]
+        direction LR
+        SaaS["<b>SaaS Apps</b><br/>M365 · HRIS"]
+        Internal["<b>Internal Apps</b><br/>Legacy · Web · API"]
+        Remote["<b>Remote Access</b><br/>ZTNA · VPN"]
+    end
+
+    PEP["<b>Policy Enforcement Points</b><br/>Reverse proxy · Gateway · WAF"]
+    RES["<b>Resource Access Layer</b><br/>File services · Databases · APIs · VMs"]
+    MON["<b>Monitoring & Telemetry Pipeline</b><br/>SIEM · UEBA · Log analytics · Alerts"]
+
+    HR -- Worker records --> LC
+    LC -- Accounts, attributes, role groups --> IdP
+    LC -. Email addresses .-> HR
+    IdP --> CA
+    CA --> SaaS & Internal & Remote
+    SaaS & Internal & Remote --> PEP
+    PEP --> RES
+    RES --> MON
+
+    %% Explicit colors so the diagram reads the same in light and dark themes
+    classDef box fill:#f6f8fa,stroke:#57606a,color:#1f2328
+    classDef control fill:#fff4e5,stroke:#d79b00,stroke-width:2px,color:#1f2328
+    classDef lifecycle fill:#e7f0fb,stroke:#4a7fc1,stroke-width:2px,color:#1f2328
+    class HR,IdP,SaaS,Internal,Remote,RES,MON box
+    class CA,PEP control
+    class LC lifecycle
+    style AV fill:none,stroke:#b8a400,stroke-width:2px,color:#b8a400

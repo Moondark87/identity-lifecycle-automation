@@ -1,0 +1,31 @@
+%%{init: {"flowchart": {"wrappingWidth": 360, "htmlLabels": true}}}%%
+flowchart TB
+    HR["<b>HRIS export</b><br/>Worker records keyed by EmployeeID"]
+    SNAP["<b>Directory snapshot</b><br/>Active Directory users, attributes, groups"]
+    PLAN["<b>New-IdentityPlan</b><br/>Match on EmployeeID · compare attributes and role groups<br/>Read-only"]
+    OUT{"Plan item"}
+    APPLY["<b>Invoke-IdentityPlan</b><br/>Joiner · Activate · Mover · Update · Leaver<br/>Run with -WhatIf first"]
+    REVIEW["<b>Review queue</b><br/>Missing / duplicate EmployeeID · possible matches<br/>Orphans · rehires · deletion eligibility"]
+    AD["<b>Active Directory</b>"]
+    ENTRA["<b>Entra ID</b><br/>via Entra Connect sync"]
+    AUDIT["<b>Audit log</b><br/>JSON lines → SIEM"]
+    FEED["<b>Email feed</b><br/>EmployeeID → email"]
+
+    HR --> PLAN
+    SNAP --> PLAN
+    PLAN --> OUT
+    OUT -- automatic actions --> APPLY
+    OUT -- needs a human --> REVIEW
+    REVIEW -. fixed at the source .-> HR
+    APPLY --> AD
+    AD --> ENTRA
+    APPLY --> AUDIT
+    AD --> FEED
+    FEED -. imported by .-> HR
+
+    classDef box fill:#f6f8fa,stroke:#57606a,color:#1f2328
+    classDef step fill:#e7f0fb,stroke:#4a7fc1,stroke-width:2px,color:#1f2328
+    classDef human fill:#fff4e5,stroke:#d79b00,stroke-width:2px,color:#1f2328
+    class HR,SNAP,AD,ENTRA,AUDIT,FEED,OUT box
+    class PLAN,APPLY step
+    class REVIEW human

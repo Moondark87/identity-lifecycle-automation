@@ -1,0 +1,29 @@
+{
+  "UpnSuffix": "example.com",
+  "SearchBase": "OU=Corp,DC=corp,DC=example,DC=com",
+  "ManagedGroupPrefix": "ROLE-",
+  "OUs": {
+    "Employees": "OU=Employees,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+    "Contractors": "OU=Contractors,OU=Users,OU=Corp,DC=corp,DC=example,DC=com",
+    "Disabled": "OU=Disabled,OU=Users,OU=Corp,DC=corp,DC=example,DC=com"
+  },
+  "ExcludeAccountPatterns": [
+    "svc-*",
+    "adm-*",
+    "bg-*",
+    "Administrator",
+    "Guest",
+    "krbtgt"
+  ],
+  "AdminAccountPatterns": [
+    "adm-*"
+  ],
+  "Joiner": {
+    "DaysBeforeStartToCreate": 7
+  },
+  "Leaver": {
+    "RetentionDays": 30,
+    "RevokeEntraSessions": true,
+    "HideFromGal": true
+  }
+}

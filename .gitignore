@@ -1,0 +1,8 @@
+# Real configuration stays out of the repo; only *.example.json is committed
+config/*.json
+!config/*.example.json
+
+# Run output
+identity-plan.json
+*.jsonl
+email-feed.csv

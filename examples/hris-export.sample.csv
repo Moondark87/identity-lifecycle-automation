@@ -1,0 +1,18 @@
+EmployeeID,FirstName,LastName,PreferredName,Department,JobCode,JobTitle,Location,ManagerEmployeeID,WorkerType,Status,StartDate,EndDate
+100090,Owen,Grant,,Sales,SAL-REP,Account Executive,SITE-B,100111,Employee,Terminated,2021-01-11,2026-08-01
+100101,Dana,Whitfield,,IT,IT-MGR,IT Manager,HQ,,Employee,Active,2019-03-04,
+100102,Marcus,Lee,,IT,IT-SYS,Systems Administrator,HQ,100101,Employee,Active,2021-06-14,
+100103,Priya,Raman,,Finance,FIN-AP,Accounts Payable Specialist,SITE-A,100110,Employee,Active,2022-01-10,
+100104,Tomás,Herrera,Tom,Sales,SAL-REP,Account Executive,SITE-B,100111,Employee,Pending,2026-10-19,
+100105,Aisha,Bello,,HR,HR-GEN,HR Generalist,HQ,100112,Employee,Active,2026-10-13,
+100106,Kevin,O'Connor,,Finance,FIN-AP,Accounts Payable Specialist,SITE-A,100110,Employee,Terminated,2020-05-01,2026-10-15
+100107,Sofia,Marino,,Sales,SAL-REP,Account Executive,SITE-B,100111,Contractor,Terminated,2025-02-01,2026-10-31
+100108,James,Park,,IT,IT-HD,Service Desk Analyst,HQ,100101,Employee,Active,2023-08-21,
+100109,Elena,Novak,,Finance,FIN-AP,Accounts Payable Specialist,SITE-A,100110,Employee,Active,2024-04-01,
+100110,Robert,Chen,,Finance,FIN-MGR,Finance Manager,SITE-A,,Employee,Active,2018-09-17,
+100111,Grace,Okafor,,Sales,SAL-MGR,Sales Manager,SITE-B,,Employee,Active,2017-02-06,
+100112,Hannah,Brooks,,HR,HR-MGR,HR Manager,HQ,,Employee,Active,2016-11-28,
+100113,Liam,Walsh,,IT,IT-SYS,Systems Engineer,HQ,100101,Employee,Pending,2026-11-30,
+100114,Marcus,Lee,,Sales,SAL-REP,Account Executive,HQ,100111,Employee,Active,2026-10-14,
+100115,Nina,Patel,,IT,IT-HD,Service Desk Analyst,HQ,100101,Employee,Active,2026-10-16,
+,Chris,Dale,,Sales,SAL-REP,Account Executive,SITE-B,100111,Contractor,Active,2026-10-01,
