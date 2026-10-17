@@ -18,7 +18,7 @@ flowchart TB
 
     HR -- Worker records --> LC
     LC -- Accounts, attributes, role groups --> IdP
-    LC -. Email addresses .-> HR
+    IdP -. Email feed by EmployeeID .-> HR
     IdP --> CA
     CA --> SaaS & Internal & Remote
     SaaS & Internal & Remote --> PEP
