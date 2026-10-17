@@ -98,7 +98,7 @@ Describe 'New-IdentityPlan' {
         BeforeAll {
             $repoRoot = Split-Path -Parent $PSScriptRoot
             $hris = @(Import-Csv (Join-Path $repoRoot 'examples/hris-export.sample.csv') -Encoding UTF8)
-            $dir = @(Get-Content (Join-Path $repoRoot 'examples/directory-snapshot.sample.json') -Raw | ConvertFrom-Json)
+            $dir = Get-Content (Join-Path $repoRoot 'examples/directory-snapshot.sample.json') -Raw | ConvertFrom-Json   # passed as-is: the module flattens it
             $script:SamplePlan = Invoke-Plan -Hris $hris -Directory $dir
         }
         It 'produces <Count> <Action> item(s)' -ForEach @(
@@ -236,7 +236,7 @@ Describe 'New-IdentityPlan' {
             (Invoke-Plan -Hris (New-Hris @{ EmployeeID = '' }))[0].Action | Should -Be 'Review'
         }
         It 'flags duplicate EmployeeIDs in HRIS and leaves the account alone' {
-            $plan = Invoke-Plan -Hris @((New-Hris), (New-Hris @{ FirstName = 'Sam' })) -Directory (New-DirUser)
+            $plan = @(Invoke-Plan -Hris @((New-Hris), (New-Hris @{ FirstName = 'Sam' })) -Directory (New-DirUser))
             $plan.Count | Should -Be 1
             $plan[0].Action | Should -Be 'Review'
         }
@@ -299,7 +299,7 @@ Describe 'Invoke-IdentityPlan' -Tag 'Directory' {
         }
         foreach ($name in $stubs.Keys) {
             if (-not (Get-Command $name -ErrorAction SilentlyContinue)) {
-                $params = ($stubs[$name] -split ',' | ForEach-Object { "`$$_" }) -join ', '
+                $params = ($stubs[$name] -split ',' | ForEach-Object { if ($_ -eq 'Reset') { '[switch]$Reset' } else { "`$$_" } }) -join ', '
                 $body = "[CmdletBinding(SupportsShouldProcess)] param($params)"
                 Set-Item -Path "function:global:$name" -Value ([scriptblock]::Create($body))
             }

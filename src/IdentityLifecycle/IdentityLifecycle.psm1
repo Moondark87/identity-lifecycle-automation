@@ -313,6 +313,11 @@ function New-IdentityPlan {
         [datetime]$AsOf = (Get-Date)
     )
 
+    # Windows PowerShell's ConvertFrom-Json emits a JSON array as one object; flatten
+    # one level so callers can pass its output directly.
+    $HrisRecords = @($HrisRecords | ForEach-Object { $_ })
+    $DirectoryUsers = @($DirectoryUsers | ForEach-Object { $_ })
+
     $AsOf = $AsOf.Date
     $prefix = [string]$Settings.ManagedGroupPrefix
     $leadDays = [int]$Settings.Joiner.DaysBeforeStartToCreate
